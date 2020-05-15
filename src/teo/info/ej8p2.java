@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ej8p2 {
 	public ej8p2(){}
-	public double[] calcular_autocorrelacion (int B[][], int n) { /dada una imagen cuadrada y su dimension n, retorna la autocorrelacion para las distancias de 0 a n
+	public double[] calcular_autocorrelacion (int B[][], int n) { //dada una imagen cuadrada y su dimension n, retorna la autocorrelacion para las distancias de 0 a n
 		double autoc[]= new double[n];
 		for (int d=0;d<n;d++)
 			autoc[d]=0;
@@ -21,8 +21,8 @@ public class ej8p2 {
 		return autoc;
 	}
 	
-	public Salidaej8p2 calcularMayorCoincidencia(int A[][], int B[][], int dimA, int dimB) { /dadas dos imagenes con su dimension, retorna el par (i,j) desde donde una imagen y la otra tienen su mayor coincidencia
-		ArrayList<Salidaej8p2> lista=new ArrayList<Salidaej8p2>();                           / y la correlacion cruzada de las imagenes a partir de ese punto
+	public Salidaej8p2 calcularMayorCoincidencia(int A[][], int B[][], int dimA, int dimB) { //dadas dos imagenes con su dimension, retorna el par (i,j) desde donde una imagen y la otra tienen su mayor coincidencia
+		ArrayList<Salidaej8p2> lista=new ArrayList<Salidaej8p2>();                           // y la correlacion cruzada de las imagenes a partir de ese punto
 		for(int i=0;i<=dimB-dimA;i++) {
 			for(int j=0;j<=dimB-dimA;j++) {
 				Salidaej8p2 nodo=new Salidaej8p2(i,j,0.0);
