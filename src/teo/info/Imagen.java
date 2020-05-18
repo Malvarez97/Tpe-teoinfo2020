@@ -1,3 +1,4 @@
+package teo.info;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
