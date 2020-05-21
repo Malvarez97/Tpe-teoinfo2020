@@ -1,53 +1,42 @@
 package teo.info;
-import org.jfree.chart.ChartFactory;
-import org.jfree.chart.ChartFrame;
-import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.category.DefaultCategoryDataset;
-import teo.info.Distribuciones;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.Iterator;
+
 
 public class Main {
 
 	public static void main(String[] args) {
-
-
-		/**  Main 1
-        ArrayList<NodoImagen> lista=new Calculador().ordenarImagenes();
-        for(NodoImagen n:lista) {
-            System.out.print("la correlacion cruzada entre imagen original e imagen ");
-            System.out.print(n.getImagen().getNombre());
-            System.out.print(" es: ");
-            System.out.println(n.getCorrelacion());
-         }
-         //* Main 2
-         ej8p2 ej= new ej8p2();
-         int[][] B= {{6,6,3},{4,9,3},{2,1,2}};
-         int[][] A={{6,6},{9,3}};
-         System.out.println(ej.calcularMayorCoincidencia(A, B, 2, 3).toString());
-         */
-    	/** Main 3 , prueba de el ejercicio 2*/
-		/**int [][] matriz = {{6,6,3},{4,9,3},{2,1,2}};;*/
-		Imagen G=new Imagen();
-		int[][] matriz =G.getValoresMat("Will(Original)");
-		Distribuciones A=new Distribuciones(matriz);
-		Map J = A.get();
-		Iterator it = J.keySet().iterator();
-		while(it.hasNext()){
-			Integer key = (Integer) it.next();
-			System.out.println("Digito " + key + " -> Valor: " + (Double)(J.get(key)));
+		/** Ejercicio 1*/
+		ArrayList<NodoImagen> lista = new Calculador().ordenarImagenes();// devuelve la correlacion de la imagen de mayor a menos , osea que la que este en la posicion 0 , sera la que tenaga mayor correlacion con la foto orginal
+		System.out.println("La correlacion cruzada entra la imagen orginal y las siguientes imagenes ordenadas por las correlaciones fue  :");
+		for (NodoImagen n : lista) {
+			System.out.println("Imagen" + n.getImagen().getNombre() + " : " + n.getCorrelacion());
 		}
-		Histograma H= new Histograma();
-		H.Get_histograma(J);
-		System.out.println(A.cantidad_digitos);
-		 System.out.println("la media es "+A.get_Media());
-		System.out.println("el desvio es de "+A.get_DesvioEstandar());
+		System.out.println();
+		System.out.println();
+		/**Ejercicio 2*/
+			Imagen imagen = new Imagen();
+			int[][] m_policia = imagen.getValoresMat("Will_ej2");
+			int[][] m_W_Original = imagen.getValoresMat("Will(Original)");
+			int[][] m_W_mayorcorrelacion = imagen.getValoresMat(lista.get(0).getImagen().getNombre());
+			Distribuciones policia = new Distribuciones(m_policia);
+			Distribuciones w_original = new Distribuciones(m_W_Original);
+			Distribuciones w_mayorcorrelacion = new Distribuciones(m_W_mayorcorrelacion);
+		/** Informacion de la imagen del policia*/
+			System.out.println("la media de la imagen del policia es:  " + policia.get_Media() + "  y el desvio estandar de esta es :  " + policia.get_DesvioEstandar());
+			Histograma hist = new Histograma();
+			hist.Get_histograma(policia.get(), "Imagen que tenia el policia ");
+		/** Informacion de la imagen Original de Will*/
+			System.out.println("la media dela imagen Original de Will es:  " + w_original.get_Media() + "  y el desvio estandar de esta es :  " + w_original.get_DesvioEstandar());
+			hist.Get_histograma(w_original.get(), "Imagen Original de Will ");
+		/** Informacion de la imagen de correlacion cruzada mas similar obtenida en el ejercicio 1*/
+			System.out.println("la media dela imagen Original de Will es:  " + w_mayorcorrelacion.get_Media() + "  y el desvio estandar de esta es :  " + w_mayorcorrelacion.get_DesvioEstandar());
+			hist.Get_histograma(w_mayorcorrelacion.get(), "Imagen mas parecida obtenida por correlacion cruzazda  ");
+
+	}
+
+	}
 
 
-		}
-}
 
 
 

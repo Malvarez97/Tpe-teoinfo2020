@@ -1,14 +1,15 @@
+package teo.info;
 
-public class Salidaej8p2 implements Comparable {
+public class Salida implements Comparable {
 	private int i;
 	private int j; 
 	private double ccruzada;
-	public Salidaej8p2(int i, int j, double autoc) {
+	public Salida(int i, int j, double autoc) {
 		this.i=i;
 		this.j=j;
 		this.ccruzada=autoc;
 	}
-	public Salidaej8p2() {
+	public Salida() {
 		this.i=0;
 		this.j=0;
 		this.ccruzada=0.0;
@@ -16,9 +17,9 @@ public class Salidaej8p2 implements Comparable {
 	
 	@Override
 	public int compareTo(Object otra) {
-		if (this.ccruzada< ((Salidaej8p2) otra).getCorrelacionCruzada())
+		if (this.ccruzada< ((Salida) otra).getCorrelacionCruzada())
 			return 1;
-		else if (this.ccruzada> ((Salidaej8p2) otra).getCorrelacionCruzada())
+		else if (this.ccruzada> ((Salida) otra).getCorrelacionCruzada())
 			return -1;
 		return 0;
 	}
