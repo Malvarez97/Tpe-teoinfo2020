@@ -55,33 +55,7 @@
       <recent name="C:\Users\Cas\Documents\GitHub\Tpe-teoinfo2020\src\teo\info\imagenes" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Histograma">
-    <configuration name="CrearImagen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="teo.info.CrearImagen" />
-      <module name="Tpe-teoinfo2020" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="teo.info.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Histograma" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="teo.info.Histograma" />
-      <module name="Tpe-teoinfo2020" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="teo.info.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="teo.info.Main" />
       <module name="Tpe-teoinfo2020" />
@@ -92,16 +66,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.CrearImagen" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Histograma" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Histograma" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.CrearImagen" />
       </list>
     </recent_temporary>
   </component>
@@ -132,12 +99,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1589129159798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1589129159798" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590071090054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1590071090054" />
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1589735524474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -150,21 +122,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589746452067" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1589752133685">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom" timestamp="1590071229801">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590071229801" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133685" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1589752133683">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1342" height="195" key="GridCell.Tab.0.center" timestamp="1590071229801">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590071229801" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133683" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1589752133682">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1342" height="195" key="GridCell.Tab.0.left" timestamp="1590071229801">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590071229801" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133682" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1589752133685">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1342" height="195" key="GridCell.Tab.0.right" timestamp="1590071229801">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1342" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590071229801" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133685" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589752133686">
       <screen x="0" y="0" width="1920" height="1040" />
