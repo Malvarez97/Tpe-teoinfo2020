@@ -12,10 +12,9 @@ public class Calculador { //esta clase se encargara de hacer los calculos con la
 		return cc;
 	}
 	
-	public ArrayList<NodoImagen> ordenarImagenes(){
+	public ArrayList<NodoImagen> ordenarImagenes(Imagen original){
 		ArrayList<NodoImagen> lista =new ArrayList<NodoImagen>();
-		Imagen original= new Imagen(); //creo la imagen original
-		int[][] morig= original.getValoresMat("Will(Original)");//cargo la imagen original
+		int[][] morig= original.getMatriz();//cargo la imagen original
 		for (int i=1;i<=5;i++) {
 			Imagen obtenida= new Imagen(); //creo una imagen
 			int[][] mob=obtenida.getValoresMat("Will_"+i); //cargo una nueva imagen
