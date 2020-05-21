@@ -1,4 +1,3 @@
-package teo.info;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -10,6 +9,7 @@ public class Imagen {
 	private int ancho;
 	private int largo;
 	private String nombre;
+	private int[][] matriz;
     public Imagen() {
     	largo=0;
     	ancho=0;
@@ -32,14 +32,34 @@ public class Imagen {
         /** recorrer el buffer e ingreso los datos en la matriz */
         this.ancho=imagen.getWidth();
         this.largo=imagen.getHeight();
-        int matriz[][] = new int[imagen.getWidth()][imagen.getHeight()];
+        this.matriz = new int[imagen.getWidth()][imagen.getHeight()];
         for (int alto = 0; alto < imagen.getHeight(); alto++) {
             for (int ancho = 0; ancho < imagen.getWidth(); ancho++) {
                 Color Tpixel =new Color(imagen.getRGB(ancho, alto),true); //** devuelve el tono de color del pixel(en este caso el azul , pero podria ser por cualquiera de los 3 por que los tonos de gris tienen la misma cantidad de cada color*/
                 matriz[ancho][alto] =Tpixel.getBlue() ;
             }
         }
+<<<<<<< HEAD
+=======
+        
+
+       /*imprimo la matriz (para testear)
+        for (int a = 0; a < imagen.getWidth(); a++) {
+            System.out.println();
+            for (int l = 0; l < imagen.getHeight(); l++) {
+                System.out.print(matriz[a][l]);
+            }
+        }
+        System.out.println();
+        System.out.println("largo de imagen  " + imagen.getHeight());
+        System.out.println("ancho de la imagen  " + imagen.getWidth());*/
+       
+>>>>>>> parent of c081e56... Revert "Cambios para conectar mejor los ejercicios"
         return matriz;
+    }
+    
+    public int[][] getMatriz(){
+    	return this.matriz;
     }
     
     public String getNombre() {
