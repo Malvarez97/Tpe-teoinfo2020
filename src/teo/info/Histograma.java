@@ -1,17 +1,15 @@
+package teo.info;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
-import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-import java.io.File;
 import java.util.Map;
 
 public class Histograma {
-	private String nombre;
-    public Histograma(String nombre){this.nombre=nombre;};
+    public Histograma(){};
 
     public void Get_histograma (Map<Integer,Double> mapa){
         try {
@@ -29,7 +27,6 @@ public class Histograma {
             F.setSize(20000, 10000);
             F.setLocationRelativeTo(null);
             F.setVisible(true);
-            ChartUtilities.saveChartAsPNG(new File("src\\Histogramas\\"+nombre+".png"), J, 600, 300 );
         } catch (Exception e) {
             System.out.println("error en el histograma" + e);
             }

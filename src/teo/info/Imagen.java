@@ -1,3 +1,4 @@
+package teo.info;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -9,7 +10,6 @@ public class Imagen {
 	private int ancho;
 	private int largo;
 	private String nombre;
-	private int[][] matriz;
     public Imagen() {
     	largo=0;
     	ancho=0;
@@ -32,7 +32,7 @@ public class Imagen {
         /** recorrer el buffer e ingreso los datos en la matriz */
         this.ancho=imagen.getWidth();
         this.largo=imagen.getHeight();
-        this.matriz = new int[imagen.getWidth()][imagen.getHeight()];
+        int matriz[][] = new int[imagen.getWidth()][imagen.getHeight()];
         for (int alto = 0; alto < imagen.getHeight(); alto++) {
             for (int ancho = 0; ancho < imagen.getWidth(); ancho++) {
                 Color Tpixel =new Color(imagen.getRGB(ancho, alto),true); //** devuelve el tono de color del pixel(en este caso el azul , pero podria ser por cualquiera de los 3 por que los tonos de gris tienen la misma cantidad de cada color*/
@@ -40,6 +40,7 @@ public class Imagen {
             }
         }
         
+
 
        /*imprimo la matriz (para testear)
         for (int a = 0; a < imagen.getWidth(); a++) {
@@ -53,10 +54,6 @@ public class Imagen {
         System.out.println("ancho de la imagen  " + imagen.getWidth());*/
        
         return matriz;
-    }
-    
-    public int[][] getMatriz(){
-    	return this.matriz;
     }
     
     public String getNombre() {
