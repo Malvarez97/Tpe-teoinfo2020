@@ -39,8 +39,6 @@ public class Imagen {
                 matriz[ancho][alto] =Tpixel.getBlue() ;
             }
         }
-<<<<<<< HEAD
-=======
         
 
        /*imprimo la matriz (para testear)
@@ -54,7 +52,6 @@ public class Imagen {
         System.out.println("largo de imagen  " + imagen.getHeight());
         System.out.println("ancho de la imagen  " + imagen.getWidth());*/
        
->>>>>>> parent of c081e56... Revert "Cambios para conectar mejor los ejercicios"
         return matriz;
     }
     
@@ -73,27 +70,6 @@ public class Imagen {
     	return largo;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-  /*imprimo la matriz (para testear)
-        for (int a = 0; a < imagen.getWidth(); a++) {
-            System.out.println();
-            for (int l = 0; l < imagen.getHeight(); l++) {
-                System.out.print(matriz[a][l]);
-            }
-        }
-        System.out.println();
-        System.out.println("largo de imagen  " + imagen.getHeight());
-        System.out.println("ancho de la imagen  " + imagen.getWidth());**/
 
 
 

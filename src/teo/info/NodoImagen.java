@@ -1,5 +1,3 @@
-package teo.info;
-
 public class NodoImagen implements Comparable{//esta clase sirve de nodo para las listas ordenadas de correlacion cruzada
 	private Imagen imagen;
 	private int correlacion;
