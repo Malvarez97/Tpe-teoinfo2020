@@ -45,8 +45,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/importar/jfreechart-1.0.13.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -55,7 +55,7 @@
       <recent name="C:\Users\Cas\Documents\GitHub\Tpe-teoinfo2020\src\teo\info\imagenes" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Histograma">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="CrearImagen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="teo.info.CrearImagen" />
       <module name="Tpe-teoinfo2020" />
@@ -94,13 +94,13 @@
     </configuration>
     <list>
       <item itemvalue="Application.CrearImagen" />
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Histograma" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Histograma" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Histograma" />
         <item itemvalue="Application.CrearImagen" />
       </list>
     </recent_temporary>
@@ -132,6 +132,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1589129159798">
@@ -146,26 +147,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589729554237" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1589746452067">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1589824094275">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589746452067" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1589752133685">
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589824094275" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1589834871965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133685" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1589752133683">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589834871965" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1589834871965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133683" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1589752133682">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589834871965" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1589834871964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133682" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1589752133685">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589834871964" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1589834871965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133685" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589834871965" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589752133686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -182,10 +183,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133686" />
-    <state x="880" y="94" key="SettingsEditor" timestamp="1589747411356">
+    <state x="880" y="94" key="SettingsEditor" timestamp="1589824099717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="880" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589747411356" />
+    <state x="880" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589824099717" />
     <state x="342" y="140" key="new project wizard" timestamp="1589657772211">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

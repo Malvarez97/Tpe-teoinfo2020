@@ -14,7 +14,7 @@ public class Distribuciones {
         this.cantidad_digitos = (M_imagen.length *M_imagen[0].length);
     }
 
-    private Map<Integer,Double> get() {
+    public Map<Integer,Double> get() {
         Map <Integer,Double> distribuciones = new HashMap<Integer, Double>();
         for (int i = 0; i < M_imagen.length; i++) {
             for (int j = 0; j < M_imagen[i].length; j++) {
