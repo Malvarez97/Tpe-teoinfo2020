@@ -1,9 +1,12 @@
+package teo.info;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
+import teo.info.*;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Iterator;
@@ -39,8 +42,8 @@ public class Main {
 			System.out.println("Digito " + key_orig + " -> Valor: " + (Double)(map_orig.get(key_orig)));
 		}
 		Histograma h_orig= new Histograma(original.getNombre());
-		h_orig.Get_histograma(map_orig);
-		System.out.println(dis_orig.cantidad_digitos);
+		h_orig.Get_histograma(map_orig,original.getNombre());
+		System.out.println(dis_orig.getCantidad_digitos());
 		 System.out.println("la media es "+dis_orig.get_Media());
 		System.out.println("el desvio es de "+dis_orig.get_DesvioEstandar());
 		//aca tenemos que repetir con la primera de lista y la nueva que trajo el policia
@@ -54,8 +57,8 @@ public class Main {
 			System.out.println("Digito " + key_mejor + " -> Valor: " + (Double)(map_mejor.get(key_mejor)));
 		}
 		Histograma h_mejor= new Histograma(lista.get(0).getImagen().getNombre());
-		h_mejor.Get_histograma(map_mejor);
-		System.out.println(dis_mejor.cantidad_digitos);
+		h_mejor.Get_histograma(map_mejor,lista.get(0).getImagen().getNombre());
+		System.out.println(dis_mejor.getCantidad_digitos());
 		 System.out.println("la media es "+dis_mejor.get_Media());
 		System.out.println("el desvio es de "+dis_mejor.get_DesvioEstandar());
 		
@@ -70,8 +73,8 @@ public class Main {
 			System.out.println("Digito " + key_policia + " -> Valor: " + (Double)(map_policia.get(key_policia)));
 		}
 		Histograma h_policia= new Histograma(policia.getNombre());
-		h_policia.Get_histograma(map_policia);
-		System.out.println(dis_policia.cantidad_digitos);
+		h_policia.Get_histograma(map_policia,policia.getNombre());
+		System.out.println(dis_policia.getCantidad_digitos());
 		 System.out.println("la media es "+dis_policia.get_Media());
 		System.out.println("el desvio es de "+dis_policia.get_DesvioEstandar());
 

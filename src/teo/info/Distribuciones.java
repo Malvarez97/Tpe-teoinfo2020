@@ -1,4 +1,4 @@
-
+package teo.info;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,6 +12,10 @@ public class Distribuciones {
     public Distribuciones(int[][] M_imagen) {
         this.M_imagen = M_imagen;
         this.cantidad_digitos = (M_imagen.length *M_imagen[0].length);
+    }
+
+    public double getCantidad_digitos() {
+        return cantidad_digitos;
     }
 
     public Map<Integer,Double> get() {
