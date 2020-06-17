@@ -1,4 +1,4 @@
-
+package teo.info;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -14,7 +14,12 @@ public class Imagen {
     	largo=0;
     	ancho=0;
     }
-
+    public Imagen(int ancho,int largo,String nombre,int[][] matriz ){
+        this.ancho=ancho;
+        this.largo=largo;
+        this.nombre=nombre;
+        this.matriz=matriz;
+    }
     private BufferedImage getImage(String filename) {
         try {
             InputStream in = getClass().getResourceAsStream(filename);// ingresa el directorio en la entrada que luego es cargada en la
@@ -47,10 +52,10 @@ public class Imagen {
             for (int l = 0; l < imagen.getHeight(); l++) {
                 System.out.print(matriz[a][l]);
             }
-        }
+        }*/
         System.out.println();
         System.out.println("largo de imagen  " + imagen.getHeight());
-        System.out.println("ancho de la imagen  " + imagen.getWidth());*/
+        System.out.println("ancho de la imagen  " + imagen.getWidth());
        
         return matriz;
     }

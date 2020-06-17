@@ -1,6 +1,7 @@
+package teo.info;
 import java.util.ArrayList;
 
-public class Calculador { //esta clase se encargara de hacer los calculos con las matrices 
+public class Calculador{  //esta clase se encargara de hacer los calculos con las matrices 
 	public Calculador() {}
 	public int getCorrelacionCruzada(int[][] matrizA, int [][] matrizB, int ancho, int largo) {
 		int cc=0;

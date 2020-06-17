@@ -1,4 +1,4 @@
-package teo.info;
+
 
 public class Salida implements Comparable {
 	private int i;

@@ -1,12 +1,12 @@
-
+package teo.info;
+import javafx.util.Pair;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.DefaultCategoryDataset;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Iterator;
+
+import java.util.*;
 
 public class Main {
 
@@ -14,7 +14,7 @@ public class Main {
 		Imagen original=new Imagen();
 		int[][] matriz_original =original.getValoresMat("Will(Original)");
 
-		/**  Main 1*/
+		/**  Main 1
         ArrayList<NodoImagen> lista=new Calculador().ordenarImagenes(original);
         for(NodoImagen n:lista) {
             System.out.print("la correlacion cruzada entre imagen original e imagen ");
@@ -26,10 +26,10 @@ public class Main {
          ej8p2 ej= new ej8p2();
          int[][] B= {{6,6,3},{4,9,3},{2,1,2}};
          int[][] A={{6,6},{9,3}};
-         System.out.println(ej.calcularMayorCoincidencia(A, B, 2, 3).toString());*/
+         System.out.println(ej.calcularMayorCoincidencia(A, B, 2, 3).toString());
          
     	/** Main 3 , prueba de el ejercicio 2*/
-		/**int [][] matriz = {{6,6,3},{4,9,3},{2,1,2}};;*/
+		/**int [][] matriz = {{6,6,3},{4,9,3},{2,1,2}};
 		Distribuciones dis_orig=new Distribuciones(matriz_original);
 		Map map_orig = dis_orig.get();
 		Iterator it_orig = map_orig.keySet().iterator();
@@ -75,7 +75,29 @@ public class Main {
 		 System.out.println("la media es "+dis_policia.get_Media());
 		System.out.println("el desvio es de "+dis_policia.get_DesvioEstandar());
 
+		}*/
+        Imagen policia= new Imagen();
+        policia.getValoresMat("Will_ej2");
+        Distribuciones dis_policia=new Distribuciones(policia.getMatriz());
+        Huffman f=new Huffman(dis_policia.get_Distribucion());/*
+        HashMap<Integer,Pair<Integer,Byte>> hash= new HashMap<>();
+        f.generarTabla("",0,f.generarArbol(),hash);
+        for(int clave:hash.keySet()){
+        	System.out.print("clave : ");
+			System.out.println(clave);
+			System.out.print("codigo : ");
+			System.out.println(hash.get(clave).getValue());
+			System.out.print("longitud :");
+            System.out.println(hash.get(clave).getKey());
+		}*/
+		int[][] matriz={{255,255},{255,17}};
+		Imagen im=new Imagen(2,2,"prueba",matriz);
+		ArrayList<Byte> lista=f.codificar(im);
+		System.out.println("el codigo para la imagen es: ");
+		for(byte b:lista){
+			System.out.print(b);
 		}
+	}
 }
 
 

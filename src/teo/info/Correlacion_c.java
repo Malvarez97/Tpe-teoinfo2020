@@ -1,4 +1,4 @@
-package teo.info;
+
 import java.util.ArrayList;
 
 public class Correlacion_c {
