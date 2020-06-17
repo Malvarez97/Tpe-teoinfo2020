@@ -13,7 +13,7 @@ public class Histograma {
 	private String nombre;
     public Histograma(String nombre){this.nombre=nombre;};
 
-    public void Get_histograma (Map<Integer,Double> mapa){
+    public void Get_histograma (Map<Integer,Double> mapa,String nombre){
         try {
         DefaultCategoryDataset data = new DefaultCategoryDataset();
         for (Integer i=0;i<=255;i++){
@@ -24,12 +24,12 @@ public class Histograma {
                 data.addValue(0,i,"");
                 }*/
             }
-            JFreeChart J = ChartFactory.createBarChart3D("TPE", "Escala de grises", "cantidad", data, PlotOrientation.VERTICAL, true, true, true);
+            JFreeChart J = ChartFactory.createBarChart3D(nombre, "Escala de grises", "cantidad", data, PlotOrientation.VERTICAL, true, true, true);
             ChartFrame F = new ChartFrame("tonos", J);
             F.setSize(20000, 10000);
             F.setLocationRelativeTo(null);
             F.setVisible(true);
-            ChartUtilities.saveChartAsPNG(new File("src\\Histogramas\\"+nombre+".png"), J, 600, 300 );
+            ChartUtilities.saveChartAsJPEG(new File("Histrogramas\\"+nombre + ".jpg"), 1,J, 600, 400);
         } catch (Exception e) {
             System.out.println("error en el histograma" + e);
             }
