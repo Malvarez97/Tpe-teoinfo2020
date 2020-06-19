@@ -52,10 +52,10 @@ public class Imagen {
             for (int l = 0; l < imagen.getHeight(); l++) {
                 System.out.print(matriz[a][l]);
             }
-        }*/
+        }
         System.out.println();
         System.out.println("largo de imagen  " + imagen.getHeight());
-        System.out.println("ancho de la imagen  " + imagen.getWidth());
+        System.out.println("ancho de la imagen  " + imagen.getWidth());*/
        
         return matriz;
     }

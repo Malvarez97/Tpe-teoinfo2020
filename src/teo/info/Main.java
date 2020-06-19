@@ -72,14 +72,13 @@ public class Main {
 		Histograma h_policia= new Histograma(policia.getNombre());
 		h_policia.Get_histograma(map_policia);
 		System.out.println(dis_policia.cantidad_digitos);
-		 System.out.println("la media es "+dis_policia.get_Media());
-		System.out.println("el desvio es de "+dis_policia.get_DesvioEstandar());
+		 System.out.println("la media es "+dis_policia.get_Media());System.out.println("el desvio es de "+dis_policia.get_DesvioEstandar());
 
 		}*/
         Imagen policia= new Imagen();
         policia.getValoresMat("Will_ej2");
         Distribuciones dis_policia=new Distribuciones(policia.getMatriz());
-        Huffman f=new Huffman(dis_policia.get_Distribucion());/*
+        Huffman f=new Huffman(dis_policia.get_Distribucion(),policia);/*
         HashMap<Integer,Pair<Integer,Byte>> hash= new HashMap<>();
         f.generarTabla("",0,f.generarArbol(),hash);
         for(int clave:hash.keySet()){
@@ -90,13 +89,19 @@ public class Main {
 			System.out.print("longitud :");
             System.out.println(hash.get(clave).getKey());
 		}*/
-		int[][] matriz={{255,255},{255,17}};
-		Imagen im=new Imagen(2,2,"prueba",matriz);
-		ArrayList<Byte> lista=f.codificar(im);
-		System.out.println("el codigo para la imagen es: ");
-		for(byte b:lista){
-			System.out.print(b);
+		f.codificar();
+		int[][] matriz=policia.getMatriz();
+		int[][] matriz2=f.decodificar();
+		int distintos=0;
+		for(int i=0;i<policia.getLargo();i++){
+			for(int j=0;j<policia.getAncho();j++){
+				if(matriz[j][i]!=matriz2[j][i]) {
+					System.out.println("matriz1 "+matriz[j][i]+" matriz2 "+matriz2[j][i]);
+					distintos++;
+				}
+			}
 		}
+		System.out.println("difieren en "+distintos+" pixeles");
 	}
 }
 
