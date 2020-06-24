@@ -6,18 +6,20 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class Distribuciones {
+    private Imagen imagen;
      private int[][] M_imagen;
       double cantidad_digitos;
 
-    public Distribuciones(int[][] M_imagen) {
-        this.M_imagen = M_imagen;
-        this.cantidad_digitos = (M_imagen.length *M_imagen[0].length);
+    public Distribuciones(Imagen imagen) {
+        this.imagen = imagen;
+        this.M_imagen=imagen.getMatriz();
+        this.cantidad_digitos = (imagen.getLargo() *imagen.getAncho());
     }
 
     public Map<Integer,Double> get() {
         Map <Integer,Double> distribuciones = new HashMap<Integer, Double>();
-        for (int i = 0; i < M_imagen.length; i++) {
-            for (int j = 0; j < M_imagen[i].length; j++) {
+        for (int i = 0; i < imagen.getLargo(); i++) {
+            for (int j = 0; j < imagen.getAncho(); j++) {
                 if (distribuciones.containsKey(M_imagen[i][j])) {
                     Double cantidad = distribuciones.get(M_imagen[i][j]) + 1.0;
                     distribuciones.put(M_imagen[i][j], cantidad);

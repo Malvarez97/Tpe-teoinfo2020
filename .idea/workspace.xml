@@ -20,28 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="098e29e8-85b1-4cac-a59a-0e8605fc57f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/teo/info/ManejadorArchivos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/teo/info/Canal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will(Original).bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will(Original).bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_1.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_1.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_2.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_2.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_3.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_3.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_4.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_4.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_5.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_5.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_Canal10.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_Canal10.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_Canal2.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_Canal2.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_Canal8.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_Canal8.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Imagenes/Will_ej2.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/Will_ej2.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tpe-teoinfo2020.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tpe-teoinfo2020.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Calculador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Calculador.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sources/codificacion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sources/codificacion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/codificacion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/codificacion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Distribuciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Distribuciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Histograma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Histograma.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Huffman.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Huffman.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Imagen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Imagen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/ManejadorArchivos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tpe-teoinfo2020/teo/info/ManejadorArchivos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/teo/info/Distribuciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/teo/info/Distribuciones.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/teo/info/Huffman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/teo/info/Huffman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/teo/info/Imagen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/teo/info/Imagen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/teo/info/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/teo/info/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/teo/info/ManejadorArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/teo/info/ManejadorArchivos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,58 +142,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589746452067" />
-    <state width="1323" height="285" key="GridCell.Tab.0.bottom" timestamp="1592542821880">
+    <state width="1323" height="239" key="GridCell.Tab.0.bottom" timestamp="1592984519419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592542821880" />
+    <state width="1323" height="239" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592984519419" />
     <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590109594063" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133685" />
-    <state width="1323" height="285" key="GridCell.Tab.0.center" timestamp="1592542821880">
+    <state width="1323" height="239" key="GridCell.Tab.0.center" timestamp="1592984519418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592542821880" />
+    <state width="1323" height="239" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592984519418" />
     <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590109594063" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133683" />
-    <state width="1323" height="285" key="GridCell.Tab.0.left" timestamp="1592542821879">
+    <state width="1323" height="239" key="GridCell.Tab.0.left" timestamp="1592984519418">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592542821879" />
+    <state width="1323" height="239" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592984519418" />
     <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590109594063" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133682" />
-    <state width="1323" height="285" key="GridCell.Tab.0.right" timestamp="1592542821880">
+    <state width="1323" height="239" key="GridCell.Tab.0.right" timestamp="1592984519419">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592542821880" />
+    <state width="1323" height="239" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592984519419" />
     <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590109594063" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133685" />
-    <state width="1323" height="285" key="GridCell.Tab.1.bottom" timestamp="1592542821882">
+    <state width="1323" height="239" key="GridCell.Tab.1.bottom" timestamp="1592984519421">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592542821882" />
+    <state width="1323" height="239" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592984519421" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133686" />
-    <state width="1323" height="285" key="GridCell.Tab.1.center" timestamp="1592542821881">
+    <state width="1323" height="239" key="GridCell.Tab.1.center" timestamp="1592984519420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1592542821881" />
+    <state width="1323" height="239" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1592984519420" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133686" />
-    <state width="1323" height="285" key="GridCell.Tab.1.left" timestamp="1592542821881">
+    <state width="1323" height="239" key="GridCell.Tab.1.left" timestamp="1592984519420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1592542821881" />
+    <state width="1323" height="239" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1592984519420" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133686" />
-    <state width="1323" height="285" key="GridCell.Tab.1.right" timestamp="1592542821881">
+    <state width="1323" height="239" key="GridCell.Tab.1.right" timestamp="1592984519420">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="285" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592542821881" />
+    <state width="1323" height="239" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592984519420" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589752133686" />
     <state x="880" y="94" key="SettingsEditor" timestamp="1589747411356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="880" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589747411356" />
-    <state x="252" y="93" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1592542112501">
+    <state x="252" y="93" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1592969550002">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="252" y="93" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1592542112501" />
+    <state x="252" y="93" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1592969550002" />
     <state x="274" y="65" key="new project wizard" timestamp="1590074617693">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -211,9 +203,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="267" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589729453449" />
-    <state x="616" y="244" key="run.anything.popup" timestamp="1588902095719">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="438" y="171" key="run.anything.popup" timestamp="1592964472544">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="438" y="171" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592964472544" />
     <state x="616" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588902095719" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/teo/info/Huffman.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/teo/info/Canal.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="x" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

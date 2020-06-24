@@ -37,11 +37,11 @@ public class Imagen {
         /** recorrer el buffer e ingreso los datos en la matriz */
         this.ancho=imagen.getWidth();
         this.largo=imagen.getHeight();
-        this.matriz = new int[imagen.getWidth()][imagen.getHeight()];
-        for (int alto = 0; alto < imagen.getHeight(); alto++) {
-            for (int ancho = 0; ancho < imagen.getWidth(); ancho++) {
-                Color Tpixel =new Color(imagen.getRGB(ancho, alto),true); //** devuelve el tono de color del pixel(en este caso el azul , pero podria ser por cualquiera de los 3 por que los tonos de gris tienen la misma cantidad de cada color*/
-                matriz[ancho][alto] =Tpixel.getBlue() ;
+        this.matriz = new int[largo][ancho];
+        for (int fila = 0; fila < largo; fila++) {
+            for (int col = 0; col < ancho; col++) {
+                Color Tpixel =new Color(imagen.getRGB(col, fila),true); //** devuelve el tono de color del pixel
+                matriz[fila][col] =Tpixel.getBlue() ;
             }
         }
         
