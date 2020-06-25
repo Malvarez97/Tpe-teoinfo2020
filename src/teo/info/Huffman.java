@@ -8,22 +8,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.Byte.parseByte;
-
+/*Realiza todas las acciones referidas al Metodo Huffman*/
 public class Huffman {
     ManejadorArchivos files;
-
-
     public Huffman (){
         files=new ManejadorArchivos();
     }
 
-
-
     private ArrayList<NodoArbolH> listaOrdenada(Map<Integer,Double> probabilidades){
+        /*Genera una lista de nodos de arbol ordenadas segun su probabilidad*/
         ArrayList<NodoArbolH> lista=new ArrayList<NodoArbolH>();
         for(Integer clave: probabilidades.keySet())
         {
-            NodoArbolH nodo =new NodoArbolH(clave,probabilidades.get(clave), null);
+            NodoArbolH nodo =new NodoArbolH(clave,probabilidades.get(clave));
             lista.add(nodo);
         }
         lista.sort(null);
@@ -31,22 +28,22 @@ public class Huffman {
     }
 
     public NodoArbolH generarArbol(Map<Integer,Double> probabilidades){
+        /*Genera el arbol de huffman*/
         ArrayList<NodoArbolH> lista= listaOrdenada( probabilidades);
         while(lista.size()>1){
             NodoArbolH mayor=lista.remove(1);
             NodoArbolH menor=lista.remove(0);
             double probabilidad= mayor.getProbabilidad()+menor.getProbabilidad();
-            NodoArbolH nodo =new NodoArbolH(-1,probabilidad,null);
+            NodoArbolH nodo =new NodoArbolH(-1,probabilidad);
             nodo.setMenor(menor);
             nodo.setMayor(mayor);
-            mayor.setPadre(nodo);
-            menor.setPadre(nodo);
             lista.add(nodo);
             lista.sort(null);
         }
         return lista.get(0);
     }
     public void generarTabla(String codigo, int lon,NodoArbolH arbol, HashMap<Integer, Pair<Integer,Byte>>hash){
+        /*A partir del arbol, genera una tabla para codificar*/
        if(!arbol.esHoja()){
            generarTabla(codigo+"1",lon+1,arbol.getMenor(),hash);
            generarTabla(codigo+"0",lon+1,arbol.getMayor(),hash);
@@ -56,7 +53,9 @@ public class Huffman {
     }
 
 
-    public int codificar(Map<Integer,Double> probabilidades, Imagen imagen){
+    public double codificar(Map<Integer,Double> probabilidades, Imagen imagen,String name){
+        /*Codifica una imagen a partir de una distribucion de probabilidades e inserta el codigo
+        * y otros datos necesarios en un archivo. Devuelve el tamaño en bytes de la codificacion*/
         int pos=0;
         int libre=8;
         int lon=0;
@@ -93,16 +92,17 @@ public class Huffman {
 
             }
         }
-        files.escribir(arreglo,probabilidades,imagen);
-        return arreglo.size();
+        files.escribir(arreglo,probabilidades,imagen,name);
+        return arreglo.size()+probabilidades.size()*((Integer.SIZE+Double.SIZE)/8);
     }
 
-   public int[][] decodificar(){
+   public void decodificar(String name){
+       /*Toma un archivo con una codificacion y genera a partir de el una imagen*/
         ArrayList<Byte> codigo =new ArrayList<>();
         HashMap<Integer,Double> probabilidades=new HashMap<>();
         String nombre="";
         Integer dimension[]= new Integer[3];
-        files.leer(codigo,dimension,probabilidades);
+        files.leer(codigo,dimension,probabilidades,name);
         int largo=dimension[0];
         int ancho=dimension[1];
         int tamaño=dimension[2];
@@ -133,41 +133,15 @@ public class Huffman {
                 arbolaux=arbol;
                 }
            }
-          return matriz;
+
+          Imagen.crearImagen(matriz,largo,ancho,name);
         }
 
-
-
-    private void imprimirTabla(HashMap<Integer, Pair<Integer, Byte>> hash) {
-        for(Integer i :hash.keySet()){
-            System.out.println("simbolo: "+i);
-            System.out.println("codigo: "+hash.get(i).getValue());
-            System.out.println("longitud: "+hash.get(i).getKey());
-        }
+    public double getTasaCompresion(Map<Integer,Double> probabilidades, Imagen imagen,String name){
+        /*Calcula la tasa de compresion para una imagen con una distribucion de probabilidades*/
+        double tnuevo=codificar(probabilidades,imagen,name);
+        double toriginal=imagen.getTamanio();
+        return ((double)(toriginal/tnuevo));
     }
 
-    public void imprimirArbol(NodoArbolH nodo,int lon){
-        if(nodo!=null) {
-            if (nodo.esHoja()) {
-                System.out.print("es hoja, valor :");
-                System.out.println(nodo.getSimbolo());
-                System.out.println("longitud "+lon);
-            } else {
-                System.out.print(nodo.getProbabilidad());
-                if (nodo.getMenor() != null) {
-                   // System.out.println("menor: ");
-                    imprimirArbol(nodo.getMenor(),lon++);
-                }
-                if (nodo.getMayor() != null) {
-                    //System.out.println("mayor: ");
-                    imprimirArbol(nodo.getMayor(),lon++);
-                }
-            }
-        }
-    }
-
-    public double getTasaCompresion(Map<Integer,Double> probabilidades, Imagen imagen){
-        int tnuevo=codificar(probabilidades,imagen);
-        return ((double)(imagen.getAncho()*imagen.getLargo())/tnuevo);
-    }
 }

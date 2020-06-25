@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="Tpe-teoinfo2020:jar">
-    <output-path>$USER_HOME$</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/Tpe_teoinfo2020_jar</output-path>
     <root id="archive" name="Tpe-teoinfo2020.jar">
       <element id="module-output" name="Tpe-teoinfo2020" />
       <element id="extracted-dir" path="$PROJECT_DIR$/importar/commons-collections-2.1.1.jar" path-in-jar="/" />

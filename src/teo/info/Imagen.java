@@ -1,26 +1,24 @@
 package teo.info;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
-
+/*Esta clase realiza el manejo de todas las imagenes utilizadas*/
 public class Imagen {
 	private int ancho;
 	private int largo;
 	private String nombre;
 	private int[][] matriz;
+	private static int numero;
     public Imagen() {
     	largo=0;
     	ancho=0;
     }
-    public Imagen(int ancho,int largo,String nombre,int[][] matriz ){
-        this.ancho=ancho;
-        this.largo=largo;
-        this.nombre=nombre;
-        this.matriz=matriz;
-    }
+
     private BufferedImage getImage(String filename) {
+        /*Carga la imagen en un buffer*/
         try {
             InputStream in = getClass().getResourceAsStream(filename);// ingresa el directorio en la entrada que luego es cargada en la
            return ImageIO.read(in);
@@ -30,37 +28,46 @@ public class Imagen {
         return null;
     }
 
-    public int[][] getValoresMat(String nombrefoto) {// ¿podriamos agregarle que ponga el nombre de la foto a ingresar y lo haga automatico del Main ?
-        // creo la imagen
+    public static void crearImagen(int [][] matriz,int alto, int ancho,String name){
+        /*Crea una imagen a partir de una matriz y sus dimensiones*/
+    File fichero = new File(Main.path+"\\"+name+".bmp");
+    String formato = "bmp";
+    // Creamos la imagen para dibujar en ella.
+    BufferedImage imagen = new BufferedImage(ancho, alto, BufferedImage.TYPE_INT_RGB);
+       for (int i=0;i<1700;i++) {
+            for (int j = 0; j < 1310; j++) {
+                int rgb=new Color(matriz[i][j],matriz[i][j],matriz[i][j]).getRGB();
+                imagen.setRGB(j,i,rgb);
+            }
+        }
+    // Escribimos la imagen en el archivo.
+        try {
+        ImageIO.write(imagen, formato, fichero);
+        }
+        catch (IOException e) {
+        System.out.println("Error de escritura");
+        }
+
+    }
+
+    public int[][] getValoresMat(String nombrefoto) {
+        /*Carga los valores de la imagen dado su ubicacion*/
     	this.nombre=nombrefoto;
-        BufferedImage imagen = this.getImage("/"+nombrefoto+".bmp");//lee lo que hay en la carpeta imagenes ..curiosidad la lee de la carpeta la primera vez y hacer una copia de "segurirdad en la carpeta out de produccion, si la borras , queda guardad en esa copia y se puede volver a usar .
-        /** recorrer el buffer e ingreso los datos en la matriz */
+        BufferedImage imagen = this.getImage("/"+nombrefoto+".bmp");//lee lo que hay en la carpeta imagenes
         this.ancho=imagen.getWidth();
         this.largo=imagen.getHeight();
         this.matriz = new int[largo][ancho];
         for (int fila = 0; fila < largo; fila++) {
             for (int col = 0; col < ancho; col++) {
-                Color Tpixel =new Color(imagen.getRGB(col, fila),true); //** devuelve el tono de color del pixel
+                Color Tpixel =new Color(imagen.getRGB(col, fila),true); //devuelve el tono de color del pixel
                 matriz[fila][col] =Tpixel.getBlue() ;
             }
         }
-        
-
-       /*imprimo la matriz (para testear)
-        for (int a = 0; a < imagen.getWidth(); a++) {
-            System.out.println();
-            for (int l = 0; l < imagen.getHeight(); l++) {
-                System.out.print(matriz[a][l]);
-            }
-        }
-        System.out.println();
-        System.out.println("largo de imagen  " + imagen.getHeight());
-        System.out.println("ancho de la imagen  " + imagen.getWidth());*/
-       
         return matriz;
     }
     
     public int[][] getMatriz(){
+        /*Devuelve la matriz asociada a la imagen*/
     	return this.matriz;
     }
     
@@ -71,9 +78,12 @@ public class Imagen {
     public int getAncho() {
     	return ancho;
     }
+
     public int getLargo() {
     	return largo;
     }
+
+    public double getTamanio(){return (ancho*largo);}
 }
 
 

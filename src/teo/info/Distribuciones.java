@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.HashMap;
-
+/*Esta clase realiza el manejo de distribuciones de probabilidad, calculo de media y desvio
+* de una imagen dada*/
 public class Distribuciones {
     private Imagen imagen;
-     private int[][] M_imagen;
-      double cantidad_digitos;
+    private int[][] M_imagen;
+    double cantidad_digitos;
 
     public Distribuciones(Imagen imagen) {
         this.imagen = imagen;
@@ -16,7 +17,8 @@ public class Distribuciones {
         this.cantidad_digitos = (imagen.getLargo() *imagen.getAncho());
     }
 
-    public Map<Integer,Double> get() {
+    private Map<Integer,Double> get() {
+        /*Cuenta las ocurrencias de cada simbolo y las inserta en un mapa*/
         Map <Integer,Double> distribuciones = new HashMap<Integer, Double>();
         for (int i = 0; i < imagen.getLargo(); i++) {
             for (int j = 0; j < imagen.getAncho(); j++) {
@@ -30,7 +32,9 @@ public class Distribuciones {
         }
         return distribuciones;
     }
+
     public Map<Integer,Double> get_Distribucion() {
+        /*Calcula la distribucion de probabilidad de cada simbolo*/
         Map<Integer, Double> distribuciones = this.get();
         Map porcentaje = new HashMap<Integer, Double>();
         Iterator it = distribuciones.keySet().iterator();
@@ -42,6 +46,7 @@ public class Distribuciones {
     }
 
     public double get_Media() {
+        /*Calcula la media de la imagen*/
         Double resultado = 0.0;
         Map distribucion = this.get();
         Iterator it = distribucion.keySet().iterator();
@@ -53,6 +58,7 @@ public class Distribuciones {
     }
 
     public double get_DesvioEstandar(){
+        /*Calcula el desvio de la imagen*/
         double media=this.get_Media();
         double resultado =0;
         Map distribucion = this.get();

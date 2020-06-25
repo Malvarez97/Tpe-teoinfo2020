@@ -1,16 +1,14 @@
 package teo.info;
 import java.lang.Comparable;
+/*Clase que implementa un nodo del arbol de huffman, es comparable para poder crear el arbol*/
 public class NodoArbolH implements Comparable{
     int simbolo;
-    Byte codigo;
     double probabilidad;
     NodoArbolH menor;
     NodoArbolH mayor;
-    NodoArbolH padre;
 
-    public NodoArbolH(int simbolo, double probabilidad, NodoArbolH padre) {
+    public NodoArbolH(int simbolo, double probabilidad) {
         this.simbolo = simbolo;
-        this.padre=padre;
         this.probabilidad = probabilidad;
         this.menor=null;
         mayor=null;
@@ -20,24 +18,8 @@ public class NodoArbolH implements Comparable{
         return simbolo;
     }
 
-    public void setSimbolo(int simbolo) {
-        this.simbolo = simbolo;
-    }
-
-    public Byte getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(Byte codigo) {
-        this.codigo = codigo;
-    }
-
     public double getProbabilidad() {
         return probabilidad;
-    }
-
-    public void setProbabilidad(double probabilidad) {
-        this.probabilidad = probabilidad;
     }
 
     public NodoArbolH getMenor() {
@@ -56,20 +38,13 @@ public class NodoArbolH implements Comparable{
         this.mayor = mayor;
     }
 
-    public NodoArbolH getPadre() {
-        return padre;
-    }
-
-    public void setPadre(NodoArbolH padre) {
-        this.padre = padre;
-    }
-
     public boolean esHoja(){
         return ((mayor==null)&&(menor==null));
     }
 
     @Override
     public int compareTo(Object otroNodo) {
+        /*Compara al reves del orden natural para ordenar de mayor a menor*/
         double result= this.probabilidad-((NodoArbolH) otroNodo).getProbabilidad();
         if (result<0)
             return -1;
